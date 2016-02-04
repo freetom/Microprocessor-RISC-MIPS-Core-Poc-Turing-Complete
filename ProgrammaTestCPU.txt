@@ -1,0 +1,19 @@
+ATTENTION, FOR THE EXECUTION OF THIS PROGRAM, THE MEMORY MUST CONTAIN AT STARTUP THE VALUE OF WHICH YOU WANT TO COMPUTE THE FACTORIAL AT LOCATION 1.
+
+
+Compute Factorial (tested and works good):
+
+    xor $0,$0,$0     00000010  ;set to zero $0
+    lw $2,1($0)      8C020001  ;load from address 1 the number of which we will calculate the factorial
+    xor $3,$3,$3     00631810  ;set to zero $3
+    or $3,$2,$3      00621825  ;copy the initial value of n in $3
+    addi $3,$3,-1    2063FFFF  ;decrement the counter of 1 (the removed number is so big because the 2's complement of 1 is -1)
+    
+L1: beq $3,$0,L2     10600009  ;compare the counter with zero, if is equal, exit
+    multu $2,$2,$3   00431019  ;multiply accumulator with counter, e push the result in accumulator, in other words: n=(n)*(n-1)
+    addi $3,$3,-1    2063FFFF  ;decrement counter of 1
+    j L1             08000005  ;jump to the beginning of the cycle
+
+L2: sw $2,10($0)     AC02000A  ;save the result (the factorial) in the location of memory 10(in decimal), A(in hexadecimal).
+    STOP             04000000  ;stop
+
