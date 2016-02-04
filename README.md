@@ -3,7 +3,7 @@ Circuit of a microprocessor core with just the essential components that make it
 
 The System is of RISC architecture and implement partially the MIPS assembly language to have all the needed instruction to do any computation.<br />
 
-The content is the core (ALU+Control Unit+Register File+...) of the microprocessor without MMU, TLB, Cache, Bus of any kind (a pre-existing integrated circuit for RAM has been used as memory), Program status word, Interrupts (internal/external).
+The content is the core (ALU+Control Unit+Register File+...) of the microprocessor without Pipeline, MMU, TLB, Cache, Bus of any kind (a pre-existing integrated circuit for RAM has been used as memory), Program status word, Interrupts (internal/external), other modern cool stuff like ACPI etc...
 
 Is just a very very basic core.
 
