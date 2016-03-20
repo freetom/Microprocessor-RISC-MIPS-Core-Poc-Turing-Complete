@@ -1,5 +1,5 @@
 # Microprocessor-RISC-MIPS-Core-Poc-Turing-Complete
-Circuit of a microprocessor core with just the essential components that make it a turing complete machine
+Combinatory and Sequential Circuit of a microprocessor core with just the essential components that make it a turing complete machine
 
 The System is of RISC architecture and implement partially the MIPS assembly language to have all the needed instruction to do any computation.<br />
 
@@ -15,5 +15,7 @@ For further information, there's the project file, the program file and a subset
 
 The circuit has been developed with Logic Circuit http://www.logiccircuit.org/
 
+
+More info on Specs and Internals in the project file.
 
 Tomas Bortoli - 2013
